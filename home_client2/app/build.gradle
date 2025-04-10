@@ -1,0 +1,186 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // 添加插件的调用
+
+
+
+android {
+    compileSdkVersion = 31
+    buildToolsVersion = "30.0.2"
+    // buildToolsVersion = "28.0.3"
+
+    defaultConfig {
+        applicationId "com.example.home"
+        minSdkVersion 25
+        targetSdkVersion 30
+        versionCode 2022
+        versionName "2.0.2.2"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        ndk {
+            // 设置支持的SO库架构
+            abiFilters 'armeabi' //, 'x86', 'armeabi-v7a', 'x86_64', 'arm64-v8a'
+        }
+
+
+//        /**
+//         * buildConfig can change during patch!
+//         * we can use the newly value when patch
+//         */
+//        buildConfigField "String", "MESSAGE", "\"I am the base apk\""
+////        buildConfigField "String", "MESSAGE", "\"I am the patch apk\""
+//        /**
+//         * client version would update with patch
+//         * so we can get the newly git version easily!
+//         */
+//        buildConfigField "String", "TINKER_ID", "\"${getTinkerIdValue()}\""
+//        buildConfigField "String", "PLATFORM", "\"all\""
+
+
+    }
+
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    applicationVariants.all { variant ->
+        variant.outputs.all {
+            outputFileName = "fawerERP_${variant.versionName}_${variant.versionCode}.apk"
+        }
+    }
+
+
+    lintOptions {
+        /*表示不需要检查错误，生成的隐患文件错误，不需要检查,生成文件不停止*/
+        checkReleaseBuilds false
+        /*关于错误信息，不需要打印错误，忽略错误信息*/
+        abortOnError false
+    }
+
+
+
+    greendao {
+        schemaVersion 1                   //数据库版本号
+        targetGenDir "src/main/java"     //生成代码的根路径
+        daoPackage "com.example.home.db"          //在根路径下生成类的包名
+    }
+
+
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment:2.1.0'
+    implementation 'androidx.navigation:navigation-ui:2.1.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+      implementation 'com.zhy:okhttputils:2.6.2'
+    //RecycleView侧滑删除
+    implementation 'com.github.CymChad:BaseRecyclerViewAdapterHelper:3.0.3'
+    implementation 'com.squareup.okhttp3:okhttp:3.12.3'
+    implementation 'com.github.li-xiaojun:XPopup:2.10.0'
+//    implementation 'com.airbnb.android:lottie:4.2.2'
+//    implementation 'com.google.code.gson:gson:2.8.5'
+//    implementation 'com.alibaba:fastjson:1.2.61'
+//    implementation 'com.tencent.map:track:2.0.1'
+//
+//    implementation 'com.github.GrenderG:Toasty:1.5.0'
+//
+//
+//    //1.0.5 为 1.0.4 与 1.1.0 的过度版，其中implementation改动过大，老用户升级需谨慎
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.0.5.1'//没有使用特殊Header，可以不加这行
+    implementation 'com.orhanobut:hawk:2.0.1'
+    implementation 'com.yanzhenjie.recyclerview:x:1.3.2'
+
+//
+//
+//    // PictureSelector 基础 (必须)更新否则高版本无法安装
+    implementation 'io.github.lucksiege:pictureselector:v3.10.5'
+//    implementation 'com.github.gcacace:signature-pad:1.3.1'
+//    implementation 'com.sunmi:printerlibrary:1.0.18'
+//    implementation 'com.tencent.bugly:crashreport:latest.release' //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如4.0.3
+//    implementation 'pub.devrel:easypermissions:3.0.0'
+//    implementation 'com.github.getActivity:EasyWindow:10.6'
+//    api 'com.github.zhouzhuo810:ZzImageBox:1.3.5'
+//    api 'top.zibin:Luban:1.1.8'
+//    api 'com.aliyun.ams:alicloud-android-hotfix:3.4.0'
+//    安装后就有冲突
+//    api 'com.github.tbruyelle:rxpermissions:0.10.2'
+
+//    api 'io.reactivex.rxjava2:rxjava:2.2.10'
+//    api 'com.ypx.yimagepicker:androidx:3.1.4'
+//    api 'com.github.chrisbanes.photoview:library:1.2.4'
+//    implementation 'com.github.jenly1314:zxing-lite:2.2.0'
+
+
+
+    implementation 'com.scwang.smartrefresh:SmartRefreshLayout:1.1.0'
+    implementation 'com.scwang.smartrefresh:SmartRefreshHeader:1.1.0'
+    implementation 'com.youth.banner:banner:2.1.0'
+
+
+    implementation 'com.githang:status-bar-compat:0.3'
+    //https://blog.51cto.com/u_16213615/10261133  数据库
+    //https://github.com/greenrobot/greenDAO
+    implementation 'org.greenrobot:greendao:3.3.0' // add library
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//    implementation 'com.airbnb.android:lottie:4.2.2'
+//    implementation 'com.google.code.gson:gson:2.8.5'
+//    implementation 'com.alibaba:fastjson:1.2.61'
+//    implementation 'com.github.GrenderG:Toasty:1.5.0'
+
+
+//    implementation 'com.github.gcacace:signature-pad:1.3.1'
+//    annotationProcessor 'com.jakewharton:butterknife-compiler:10.2.0'
+//    implementation 'com.tencent.bugly:crashreport:latest.release'
+//    implementation 'pub.devrel:easypermissions:3.0.0'
+//    implementation 'com.github.getActivity:EasyWindow:10.6'
+//    api 'com.github.zhouzhuo810:ZzImageBox:1.3.5'
+
+
+//    implementation 'com.github.bumptech.glide:glide:4.9.0'
+//    api 'top.zibin:Luban:1.1.8'
+//    api 'com.aliyun.ams:alicloud-android-hotfix:3.4.0'
+//    api 'com.github.tbruyelle:rxpermissions:0.10.2'
+//    api 'io.reactivex.rxjava2:rxjava:2.2.10'
+//    api 'com.ypx.yimagepicker:androidx:3.1.4'
+//    api 'com.github.chrisbanes.photoview:library:1.2.4'
+//    api 'com.contrarywind:Android-PickerView:4.1.9'
+//    implementation 'com.jakewharton:butterknife:10.2.0'
+
+
+
+
+}
+

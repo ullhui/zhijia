@@ -1,0 +1,268 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/x20">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@mipmap/icon_sewm" />
+
+
+        <Button
+            android:id="@+id/btn_post_all"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/button_yj"
+            android:text="同步本地设备"
+            android:textColor="#ffffff"
+            android:textSize="15dp"></Button>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="*请先同步数据方便演示！"
+        android:textColor="#ff1111"
+        android:textSize="12dp" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:orientation="vertical"
+        android:padding="@dimen/x30">
+
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="选择位置"
+            android:textColor="@color/app_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:padding="6dp">
+
+
+            <RadioGroup
+                android:id="@+id/radiogroup_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/mRadioButton1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="客厅" />
+
+                <RadioButton
+                    android:id="@+id/mRadioButton2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="卧室" />
+
+                <RadioButton
+                    android:id="@+id/mRadioButton3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="厨房" />
+
+
+                <RadioButton
+                    android:id="@+id/mRadioButton4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="卫生间" />
+            </RadioGroup>
+
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_2"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="添加设备"
+            android:textColor="@color/app_color" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:padding="6dp">
+
+
+            <RadioGroup
+                android:id="@+id/radiogroup_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/mRadioButtonType1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="灯" />
+
+                <RadioButton
+                    android:id="@+id/mRadioButtonType2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="音响" />
+
+                <RadioButton
+                    android:id="@+id/mRadioButtonType3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="空调" />
+
+
+                <RadioButton
+                    android:id="@+id/mRadioButtonType4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="电视" />
+
+                <RadioButton
+                    android:id="@+id/mRadioButtonType5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="监控" />
+
+            </RadioGroup>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_add"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_gradient_login_bg"
+            android:text="添加"
+            android:textColor="#ffffff"
+            android:textSize="15dp"></Button>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/bk_grey2"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="场景模式"
+                android:textColor="#E91E63"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+
+            <RadioGroup
+                android:id="@+id/radiogroup_3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/mRadioButtonMs0"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="常规模式"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+
+                <RadioButton
+                    android:id="@+id/mRadioButtonMs1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="回家模式"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+                <RadioButton
+                    android:id="@+id/mRadioButtonMs2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="睡觉模式"
+                    android:textColor="#000000"
+                    android:textSize="15dp" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/tv_status_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:textSize="13dp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

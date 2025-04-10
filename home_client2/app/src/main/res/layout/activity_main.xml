@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical">
+
+
+    <FrameLayout
+        android:id="@+id/main_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"></FrameLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_db"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/view_fenge"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#dfdfdf" />
+
+
+        <RadioGroup
+            android:id="@+id/radiogroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/view_fenge"
+            android:layout_marginTop="4dp"
+            android:layout_marginBottom="4dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/tab_one"
+                style="@style/MTabStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:drawableTop="@drawable/selector_main_button_one"
+                android:drawablePadding="6dp"
+                android:text="主页"
+                android:textColor="@drawable/selector_main_textcolor"
+                android:textSize="11dp" />
+
+            <RadioButton
+                android:id="@+id/tab_two"
+                style="@style/MTabStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/selector_main_button_two"
+                android:drawablePadding="6dp"
+                android:text="设备"
+                android:textColor="@drawable/selector_main_textcolor"
+                android:textSize="11dp" />
+
+
+            <RadioButton
+                android:id="@+id/tab_three"
+                android:visibility="gone"
+                style="@style/MTabStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/selector_main_button_three"
+                android:drawablePadding="6dp"
+                android:text="挑战"
+                android:textColor="@drawable/selector_main_textcolor"
+                android:textSize="11dp" />
+
+
+            <RadioButton
+                android:id="@+id/tab_four"
+                style="@style/MTabStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/selector_main_button_four"
+                android:drawablePadding="6dp"
+                android:text="我的"
+                android:textColor="@drawable/selector_main_textcolor"
+                android:textSize="11dp" />
+
+
+        </RadioGroup>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>
